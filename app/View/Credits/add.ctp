@@ -24,9 +24,9 @@
             <div class="form-group">
                 <?php echo $this->Form->input('Credit.fine', array('label'=>'Multa (%)','class'=>'form-control')); ?>
             </div>
-            <div class="form-group">
-                <?php echo $this->Form->input('Credit.type', array('label'=>'Tipo de crédito', 'options' => array('Fijo','Variable'),'class'=>'form-control')); ?>
-            </div>
+            <!--<div class="form-group">-->
+                <?php //echo $this->Form->input('Credit.type', array('label'=>'Tipo de crédito', 'options' => array('Fijo','Variable'),'class'=>'form-control')); ?>
+            <!--</div>-->
             <?php echo $this->Form->input('Credit.sale_price', array('type'=>'hidden')); ?> 
             <?php echo $this->Form->input('Credit.financing', array('type'=>'hidden')); ?>    
             <?php echo $this->Form->input('Credit.date', array('type' => 'hidden')); ?>

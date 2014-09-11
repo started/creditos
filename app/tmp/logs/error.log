@@ -3982,3 +3982,621 @@ Stack Trace:
 #1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(CreditsController), Object(CakeRequest), Object(CakeResponse))
 #2 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2014-09-05 15:18:51 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
+  'enabled' => true,
+)
+Request URL: /creditos/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3499): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/login.ctp(42): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(935): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(897): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(466): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2014-09-07 15:26:46 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
+  'enabled' => true,
+)
+Request URL: /creditos/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3499): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/login.ctp(42): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(935): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(897): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(466): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2014-09-07 15:31:32 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No such file or directory',
+  'enabled' => true,
+)
+Request URL: /creditos/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3477): ConnectionManager::getDataSource('default')
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1126): Model->setDataSource('default')
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(3499): Model->setSource('users')
+#5 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Model/Model.php(1355): Model->getDataSource()
+#6 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(207): Model->schema()
+#7 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/Helper/FormHelper.php(459): FormHelper->_introspectModel('User', 'fields')
+#8 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/login.ctp(42): FormHelper->create('User', Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(935): include('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(897): View->_evaluate('/Applications/X...', Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(466): View->_render('/Applications/X...')
+#12 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#13 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#14 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2014-09-07 16:54:17 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 16:57:00 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 17:06:41 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 17:07:11 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 17:17:46 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 20:20:21 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp',
+)
+Request URL: /creditos/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 20:20:22 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp',
+)
+Request URL: /creditos/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 20:20:23 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp',
+)
+Request URL: /creditos/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-07 20:20:26 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp',
+)
+Request URL: /creditos/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-08 19:44:37 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Users/index.ctp',
+)
+Request URL: /creditos/users
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-10-03 20:38:46 Error: Fatal Error (1): Call to undefined function dias_transcurridos() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/PaymentsController.php, line 215]
+2014-10-03 20:38:46 Error: [FatalErrorException] Call to undefined function dias_transcurridos()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 215)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 215, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 215, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:28:05 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:28:05 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:33:06 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:33:06 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:33:07 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:33:07 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:34 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:34 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:35 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:35 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:36 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:36 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:36 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:36 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-10 06:34:36 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/CreditsController.php, line 123]
+2014-09-10 06:34:36 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/credits/view/52
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 123, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-11 06:46:52 Error: [MissingControllerException] Controller class CreditosController could not be found.
+Exception Attributes: array (
+  'class' => 'CreditosController',
+  'plugin' => NULL,
+)
+Request URL: /creditos//creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-11 06:48:04 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/PaymentsController.php, line 28]
+2014-09-11 06:48:04 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 28, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 28, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-11 07:03:39 Error: Fatal Error (1): Call to undefined method PaymentsController::calcular_interes() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/PaymentsController.php, line 35]
+2014-09-11 07:03:39 Error: [FatalErrorException] Call to undefined method PaymentsController::calcular_interes()
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 35, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 35, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-11 07:03:50 Error: Fatal Error (1): Call to undefined method PaymentsController::siguientePago() in [/Applications/XAMPP/xamppfiles/htdocs/creditos/app/Controller/PaymentsController.php, line 37]
+2014-09-11 07:03:50 Error: [FatalErrorException] Call to undefined method PaymentsController::siguientePago()
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/X...', 37)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/X...', 37, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(929): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/X...', 37, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Core/App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-11 07:05:05 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:06:24 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:06:39 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:11:53 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:20:00 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:22:59 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:28:35 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:29:18 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:30:14 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:30:50 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:31:26 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:32:16 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:32:56 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:33:34 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:33:48 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:34:28 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-11 07:34:37 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/creditos/app/View/Payments/add.ctp',
+)
+Request URL: /creditos/payments/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/View/View.php(463): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(192): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/creditos/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/XAMPP/xamppfiles/htdocs/creditos/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

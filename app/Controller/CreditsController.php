@@ -34,11 +34,11 @@ class CreditsController extends AppController {
             
             $this->request->data['Credit']['sale_price'] = $this->precioVenta($this->request->data['Credit']);
             
-             $this->request->data['Credit']['financing'] = $this->request->data['Credit']['sale_price'] - $down_payment;
+            $this->request->data['Credit']['financing'] = $this->request->data['Credit']['product_price'] - $down_payment;
             
+            debug($this->request->data);
             
             $guarant = $this->request->data['Guarantor'];
-//            debug($this->request->data);
 
             if($this->Credit->save($this->request->data)):
                 
@@ -50,6 +50,7 @@ class CreditsController extends AppController {
                 $this->Session->setFlash('Credito guardado!');
                 $this->redirect(array('action'=>'view', $this->Credit->id));
             endif;
+            
         endif;
     }
     
@@ -97,22 +98,75 @@ class CreditsController extends AppController {
      * @param type $id
      */
     public function view($id = null) {
+        
         $payments = new PaymentsController;
         
         $this->Credit->id = $id;
         
         $credit = $this->Credit->read();
         
+        $multa = 0;
+        
+        $diasTranscurridosMulta = 0;
+        
+        $fechaActual = date('Y-m-d');
+        
         if(empty($credit['Payment'])):
-            $interesTotal = $payments->calcular_interes($credit['Credit']['first_payment'], $credit['Credit']['interest'], $credit['Credit']['financing'], $credit['Credit']['fine'],$credit['Credit']['type']);
+            
+            $fechaLimite = $credit['Credit']['first_payment'];
+        
+            $saldo = $credit['Credit']['financing'];
+            
+            $siguientePago = $payments->obtenerFechaSiguientePago($fechaLimite);
+            
+            $diasTranscurridos = $payments->diasTranscurridos($credit['Credit']['date'], $fechaActual);
+            
+            /*if($diasTranscurridos>30):
+                
+                $diasTranscurridosMulta = $diasTranscurridos - 30;
+            
+                $diasTranscurridos = 30;
+                
+                $multa = $payments->obtenerInteres($diasTranscurridosMulta, $saldo, $credit['Credit']['fine']);
+            endif;
+            
+            $interes = $payments->obtenerInteres($diasTranscurridos, $saldo, $credit['Credit']['interest']);*/
+        
         else:
+            
             $lastPayment = count($credit['Payment'])-1;
-            $interesTotal = $payments->calcular_interes($credit['Payment'][$lastPayment]['next_payment'], $credit['Credit']['interest'] , $credit['Payment'][$lastPayment]['residue'],$credit['Credit']['fine'],$credit['Credit']['type']);
+        
+            $fechaLimite = $credit['Payment'][$lastPayment]['next_payment'];
+            
+            $saldo = $credit['Payment'][$lastPayment]['residue'];
+            
+            $siguientePago = $payments->obtenerFechaSiguientePago($fechaLimite);
+            
+            $diasTranscurridos = $payments->diasTranscurridos($credit['Payment'][$lastPayment]['date_payment'], $fechaActual);
+            
         endif;
         
-        $this->set('restante',$credit['Payment'][$lastPayment]['residue']);
+        if($diasTranscurridos>30):
+                
+            $diasTranscurridosMulta = $diasTranscurridos - 30;
+
+            $diasTranscurridos = 30;
+
+            $multa = $payments->obtenerInteres($diasTranscurridosMulta, $saldo, $credit['Credit']['fine']);
+        endif;
+
+        $interes = $payments->obtenerInteres($diasTranscurridos, $saldo, $credit['Credit']['interest']);
         
-        $this->set('interes',$interesTotal);
+        
+        $this->set('interes',$interes);
+        
+        $this->set('diasTranscurridos',$diasTranscurridos);
+        
+        $this->set('multa',$multa);
+        
+        $this->set('diasTranscurridosMulta',$diasTranscurridosMulta);
+        
+        $this->set('siguientePago',$siguientePago);
             
         $this->set('credit',$credit);
 
@@ -139,7 +193,7 @@ class CreditsController extends AppController {
             $pagototal      = $pagototal + ($interesActual + $pagoPorMes);
             $cuotaTotal     = $interesActual + $pagoPorMes;
             $cuotaTotal     = round($cuotaTotal,1);
-            $precioVenta    = $precioVenta + $cuotaTotal;
+            $precioVenta    = round($precioVenta + $cuotaTotal);
         endfor;
         
         return (string)$precioVenta;
