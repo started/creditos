@@ -1,3 +1,7 @@
+<?php 
+App::import('Controller', 'Clients');
+$clients = new ClientsController;
+?>
 <div class="content-box-large">
     <div class="panel-heading">
         <div class="panel-title">Créditos</div>
@@ -8,7 +12,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <!--<th>Estado</th>-->
+                    <th>Cliente</th>
                     <th>Producto</th>
                     <th>Precio Producto</th>
                     <th>Interés</th>
@@ -25,8 +29,15 @@
 //                debug($creditos);
                 foreach ($creditos as $key => $credito):?>
                 <tr class="<?php echo ($credito['Credit']['status']==1)? 'danger':'success';?>">
-                    <td><?php echo $credito['Credit']['id']?></td> 
-                    <!--<td><?php //echo $credito['Credit']['status']?></td>-->
+                    <td><?php echo $credito['Credit']['id']?></td>
+                    <td>
+                        <?php 
+                            $cliente = $clients->_show($credito['Credit']['client_id']);
+                            $nombreCliente = $cliente['Client']['name']." ".$cliente['Client']['last_name'];
+                            echo $this->Html->link($nombreCliente,array('controller'=>'credits','action'=>'list_credit',$credito['Credit']['client_id']));
+                            
+                        ?>
+                    </td> 
                     <td><?php echo $credito['Credit']['product_name']?></td> 
                     <td><?php echo $credito['Credit']['product_price']?></td> 
                     <td><?php echo $credito['Credit']['interest']?></td>

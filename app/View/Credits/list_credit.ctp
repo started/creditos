@@ -1,9 +1,31 @@
 <div class="content-box-large">
     <div class="panel-heading">
-        <div class="panel-title">Créditos por pagar de <?php echo $this->Html->link($client['Client']['name']." ".$client['Client']['last_name'], array('controller' => 'clients','action'=>'edit', $client['Client']['id']),array('escape' => false)); ?></div>
+        <div class="panel-title">Créditos de <?php echo $this->Html->link($client['Client']['name']." ".$client['Client']['last_name'], array('controller' => 'clients','action'=>'edit', $client['Client']['id']),array('escape' => false)); ?></div>
         <?php echo $this->Html->link('<i class="glyphicon glyphicon-plus"></i> Crédito', array('action'=>'add',$client['Client']['id']),array('class'=>'btn btn-success btn-xs','escape' => false)); ?>
         <?php echo $this->Html->link('Atrás', array('controller'=>'clients', 'action'=>'index'),array('style'=>'float:right','escape' => false)); ?>
     </div>
+    
+    <table id="user" class="table table-bordered table-striped" style="clear: both">
+        <tbody>
+            <tr>
+               <td>Cliente</td>
+               <td><?php echo $client['Client']['name']." ".$client['Client']['last_name']?></td> 
+           </tr>
+           <tr>
+               <td>Direccion</td>
+               <td><?php echo $client['Client']['address'];?></td> 
+           </tr>
+           <tr>
+               <td>Telefono</td>
+               <td><?php echo $client['Client']['phone'];?></td> 
+           </tr>
+           <tr>
+               <td>Email</td>
+               <td><?php echo $client['Client']['email'];?></td> 
+           </tr>
+        </tbody> 
+    </table>
+    
     <div class="panel-body">
         <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
             <thead>

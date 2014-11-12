@@ -10,26 +10,26 @@
                 <?php echo $this->Form->input('Credit.product_name', array('label'=>'Producto','class'=>'form-control')); ?>
             </div>
             <div class="form-group">    
-                <?php echo $this->Form->input('Credit.product_price', array('label'=>'Precio de Producto','class'=>'form-control')); ?>
+                <?php echo $this->Form->input('Credit.product_price', array('label'=>'Precio de Producto','class'=>'form-control','min'=>'0')); ?>
             </div>
             <div class="form-group">
-                <?php echo $this->Form->input('Credit.interest', array('label'=>'Interés (%)','class'=>'form-control')); ?>
+                <?php echo $this->Form->input('Credit.interest', array('label'=>'Interés (%)','class'=>'form-control','min'=>'0','max'=>'20')); ?>
             </div>
             <div class="form-group">
-                <?php echo $this->Form->input('Credit.term', array('label'=>'Plazos','class'=>'form-control')); ?>
+                <?php echo $this->Form->input('Credit.term', array('label'=>'Plazos','class'=>'form-control','min'=>'1','max'=>'10')); ?>
             </div>
             <div class="form-group">
-                <?php echo $this->Form->input('Credit.down_payment', array('label'=>'Cuota Inicial','class'=>'form-control')); ?>
+                <?php echo $this->Form->input('Credit.down_payment', array('label'=>'Cuota Inicial','class'=>'form-control','min'=>'0')); ?>
             </div>
             <div class="form-group">
-                <?php echo $this->Form->input('Credit.fine', array('label'=>'Multa (%)','class'=>'form-control')); ?>
+                <?php echo $this->Form->input('Credit.fine', array('label'=>'Multa (%)','class'=>'form-control','min'=>'0','max'=>'20')); ?>
             </div>
-            <!--<div class="form-group">-->
-                <?php //echo $this->Form->input('Credit.type', array('label'=>'Tipo de crédito', 'options' => array('Fijo','Variable'),'class'=>'form-control')); ?>
-            <!--</div>-->
+            <div class="form-group">
+                <?php echo $this->Form->date('Credit.date', array('label'=>'Fecha','class'=>'form-control')); ?>
+            </div>
             <?php echo $this->Form->input('Credit.sale_price', array('type'=>'hidden')); ?> 
             <?php echo $this->Form->input('Credit.financing', array('type'=>'hidden')); ?>    
-            <?php echo $this->Form->input('Credit.date', array('type' => 'hidden')); ?>
+            <?php //echo $this->Form->input('Credit.date', array('type' => 'hidden')); ?>
             <?php echo $this->Form->input('Credit.first_payment', array('type' => 'hidden')); ?>
             <?php echo $this->Form->input('Credit.client_id',array('type' => 'text','type'=>'hidden','value' => $this->params['pass'][0])); ?>
             </fieldset>

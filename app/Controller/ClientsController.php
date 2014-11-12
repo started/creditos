@@ -43,5 +43,11 @@ class ClientsController extends AppController {
             endif;
         endif;
     }
+    public function _show($id) {
+       $this->Client->id = $id;
+       
+       return $this->Client->read();
+
+    }
 }
 ?>

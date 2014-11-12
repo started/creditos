@@ -25,9 +25,11 @@ class CreditsController extends AppController {
             
             $this->request->data['Credit']['financing']     = (string)$financing;
             
-            $this->request->data['Credit']['date']          = (string)$date;
-            
-            $this->request->data['Credit']['first_payment'] = (string)$this->primerPago();
+            if($this->request->data['Credit']['date'] ==""):
+                $this->request->data['Credit']['date'] = (string)$date;
+            endif;
+
+            $this->request->data['Credit']['first_payment'] = (string)$this->primerPago($this->request->data['Credit']['date']);
             
             $this->request->data['Credit']['sale_price']    = $this->precioVenta($this->request->data['Credit']);
             
@@ -221,9 +223,13 @@ class CreditsController extends AppController {
         return (string)$precioVenta;
     }
     
-    private function primerPago() {
-        $dateCurrent = date('Y/m/d');
-        return  date("Y-m-d", strtotime($dateCurrent." + 30 day"));
+    private function primerPago($fecha=null) {
+           
+        if($fecha == null):
+            $fecha = date('Y/m/d');
+        endif;
+        
+        return  date("Y-m-d", strtotime($fecha." + 30 day"));
     }
     
     public function month() {
