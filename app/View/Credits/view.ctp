@@ -1,11 +1,13 @@
 <?php
-    $saldoPlan  = $credit['Credit']['financing'];
-    $saldo      = $credit['Credit']['financing'];
-    $saldo      = round($saldo,1);
-    $pagototal  = $credit['Credit']['down_payment'];
-    $pagoPorMes = $credit['Credit']['financing'] / $credit['Credit']['term'];
-    $pagoPorMes = round($pagoPorMes,1);
+    $saldoPlan   = $credit['Credit']['financing'];
+    $saldo       = $credit['Credit']['financing'];
+    $saldo       = round($saldo,1);
+    $pagototal   = $credit['Credit']['down_payment'];
+    $pagoPorMes  = $credit['Credit']['financing'] / $credit['Credit']['term'];
+    $pagoPorMes  = round($pagoPorMes,1);
     $precioVenta = $credit['Credit']['down_payment'];
+    
+    $residuo = (float)$credit['Credit']['financing'];
     
     $pagoAnticipado = 0;
     if(count($credit['Payment']) > 0):
@@ -14,6 +16,7 @@
         $datePaymentLimit = $credit['Payment'][$lastPayment]['next_payment'];
         $datePaymentLimitPrev = $credit['Payment'][$lastPayment]['date_payment'];
         $saldo = $credit['Payment'][$lastPayment]['residue'];
+        $residuo = (float)$credit['Payment'][$lastPayment]['residue'];
     else:
         $datePaymentLimit = $credit['Credit']['first_payment'];
         $datePaymentLimitPrev = $credit['Credit']['date'];
@@ -21,12 +24,39 @@
         
     endif;
     
-    $cuota =  number_format($credit['Credit']['financing']/$credit['Credit']['term'],2,'.','');
+    $cuota =  number_format($credit['Credit']['financing']/$credit['Credit']['term'],1,'.','');
     
     $cuotaTotal = number_format($cuota+$interes-$pagoAnticipado,2,'.','');
     
     $montoTotal = number_format($cuotaTotal+$multa,2,'.','');
     
+    
+?>
+
+<?php 
+    $countPago = $cuota ;
+    $countInteres = $interes;
+    $countDiasTranscurridos = $diasTranscurridos;
+    $countMulta = $multa;
+    $countDiasTranscurridosMulta = $diasTranscurridosMulta;
+    $subtotalInteres = $cuota + $interes;
+    $countSubtotalInteres = $subtotalInteres;
+    
+    
+    
+    foreach ($pagosSiguientesCredito as $key => $pago):
+
+        $countPago = $countPago + $cuota;
+        $countInteres = $countInteres + $pago['interes'];
+        $countDiasTranscurridos = $countDiasTranscurridos + $pago['diasTranscurridos'];
+        $countMulta = $countMulta + $pago['multa'];
+        $countDiasTranscurridosMulta = $countDiasTranscurridosMulta + $pago['diasTranscurridosMulta'];
+        $countSubtotalInteres = $countSubtotalInteres + ($cuota + $pago['interes']);
+        
+    endforeach;
+    
+    $totalTotal = $countPago + $countInteres + $countMulta;
+
 ?>
 <style>
     #form-pagar,
@@ -75,20 +105,26 @@
                 $("#PaymentAmount").val(sin_multa); 
             }
         });
+        
+        if($('.message').lenght()>0){
+            $('.message').addClass('alert alert-success');
+        }
     });
 </script>
 <div class="row">
     
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="content-box-large">
             <div class="panel-heading">
                 <button id="btn-detalle" class="btn btn-primary"><i class="glyphicon glyphicon-list"></i> Detalle de Crédito</button>
-                <button id="btn-pagar" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Pagar Cuota</button>
+                <?php if($residuo > 1): ?>
+                    <button id="btn-pagar" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Pagar Cuota</button>
+                <?php endif; ?>
                 <button id="btn-pagos" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> Pagos Realizados</button>
                 <button id="btn-cuotas" class="btn btn-primary"><i class="glyphicon glyphicon-eye-open"></i> Plan de Cuotas</button>
             </div>
             <div id="detalle" class="vista">
-                <h4><i class="glyphicon glyphicon-file"></i>Detalle de Crédito</h4>
+                <h4><i class="glyphicon glyphicon-file"></i>Detalle de Crédito <?php echo ($credit['Credit']['status'] == 0)? 'Deuda Saldada':'';?></h4>
                 <table id="user" class="table table-bordered table-striped" style="clear: both">
                      <tbody>
                         <tr>
@@ -143,7 +179,6 @@
                         <?php endif; ?>
                     </tbody> 
                 </table>
-                
             </div>
             
             <div id="form-pagar" class="vista">
@@ -202,25 +237,32 @@
                         
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <label>Fecha limite Pago Anterior</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                                         <span class="form-control"><?php echo $datePaymentLimitPrev; ?></span>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <label>Fecha Actual</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                                         <span class="form-control"><?php echo date('Y-m-d'); ?></span>
                                     </div>
                                 </div>
-                                <div class="col-sm-4">
+                                <div class="col-sm-3">
                                     <label>Fecha limite de Pago</label>
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
                                         <span class="form-control"><?php echo $datePaymentLimit; ?></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Fecha Siguiente de Pago</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                        <span class="form-control"><?php echo $siguientePago; ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -244,12 +286,9 @@
                         <div class="form-group has-success">
                             <label>Monto total a pagar</label>
                             <!--<button class="btn btn-primary" >Pagar todo</button>-->
-                            <?php //echo $restante; ?>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                              
-                                    <?php echo $this->Form->input('amount', array('label'=> false,'class'=>'form-control', 'value' => $montoTotal)); ?>
-                              
+                                <?php echo $this->Form->input('amount', array('label'=> false,'class'=>'form-control', 'value' => $montoTotal, 'min'=>$cuotaTotal, 'max'=>$totalTotal)); ?>
                             </div>
                         </div>
                         
@@ -264,11 +303,85 @@
                             echo $this->Form->input('days_elapsed_fine',array('type' => 'hidden','value' => $diasTranscurridosMulta));
                             echo $this->Form->input('prepayment', array('type' => 'hidden', 'value' => ""));
                             echo $this->Form->input('next_payment', array('type' => 'hidden', 'value' => $siguientePago));
-                            
-                            
                         ?>
                         
                     </fieldset>
+                    <div class="panel-body">
+                        <h2>Pagos Siguientes</h2>
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Pago</th>
+                                <th>Interés</th>
+                                <th>Dias Transcurridos</th>
+                                <th>SubTotal</th>
+                                <th>Multa</th>
+                                <th>Dias Transcurridos Multa</th>
+                                <th>Total</th>
+                                <th>Saldo</th>
+                                <th>Fecha Limite</th>
+                            </tr>
+                            <tr>
+                                <td><?php echo $cuota?></td> 
+                                <td><?php echo $interes?></td>
+                                <td><?php echo $diasTranscurridos?></td>
+                                <td><?php $subtotalInteres = $cuota + $interes; echo $subtotalInteres ?></td>
+                                <td><?php echo $multa?></td>
+                                <td><?php echo $diasTranscurridosMulta?></td>
+                                <td><?php echo $cuota + $interes + $multa ?></td>
+                                <td><?php echo $saldo?></td>
+                                <td><?php echo $datePaymentLimit?></td>
+                            </tr>
+                            <?php 
+                                $countPago = $cuota ;
+                                $countInteres = $interes;
+                                $countDiasTranscurridos = $diasTranscurridos;
+                                $countMulta = $multa;
+                                $countDiasTranscurridosMulta = $diasTranscurridosMulta;
+                                $countSubtotalInteres = $subtotalInteres;
+                            ?>    
+                            <?php foreach ($pagosSiguientesCredito as $key => $pago): ?>
+                            <tr>
+                                <td><?php echo $cuota?></td> 
+                                <td><?php echo $pago['interes']?></td>
+                                <td><?php echo $pago['diasTranscurridos']?></td>
+                                <td><?php echo $cuota + $pago['interes']?></td>
+                                <td><?php echo $pago['multa']?></td>
+                                <td><?php echo $pago['diasTranscurridosMulta']?></td>
+                                <td><?php echo $cuota + $pago['interes'] + $pago['multa'] ?></td>
+                                <td><?php echo $pago['saldo']?></td>
+                                <td><?php echo $pago['fechaLimitePagoActual']?></td>
+                            </tr>
+                            <?php 
+                                $countPago = $countPago + $cuota;
+                                $countInteres = $countInteres + $pago['interes'];
+                                $countDiasTranscurridos = $countDiasTranscurridos + $pago['diasTranscurridos'];
+                                $countMulta = $countMulta + $pago['multa'];
+                                $countDiasTranscurridosMulta = $countDiasTranscurridosMulta + $pago['diasTranscurridosMulta'];
+                                $countSubtotalInteres = $countSubtotalInteres + ($cuota + $pago['interes']);
+                                
+                            ?>
+                            <?php endforeach; ?>
+                            <tr>
+                                <th>Pago Total</th>
+                                <th>Interés Total</th>
+                                <th>Dias Transcurridos</th>
+                                <th>Total Subtotal</th>
+                                <th>Multa Total</th>
+                                <th>Dias Transcurridos Multa</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        
+                            <tr>
+                                <td><?php echo $countPago?></td>
+                                <td><?php echo $countInteres?></td>
+                                <td><?php echo $countDiasTranscurridos?></td>
+                                <td><?php echo $countSubtotalInteres ?></td>
+                                <td><?php echo $countMulta?></td>
+                                <td><?php echo $countDiasTranscurridosMulta?></td>
+                                <td><?php echo $countPago + $countInteres + $countMulta?></td>
+                            </tr>
+                        </table>
+                    </div>
                     <div>
                         <?php echo $this->Form->end(array('label' => 'Guardar','class'=>'btn btn-primary','div' => false)); ?>
                         <?php echo $this->Html->link('Cancelar',array('action'=>'index'),array('class'=>'btn btn-primary')); ?>
@@ -289,7 +402,6 @@
                                 <th>Interes Cuota</th>
                                 <th class="total">Total Cuota</th>
                                 <th class="pago-total">Saldo</th>
-                                <th>Fecha de Pago</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -305,8 +417,6 @@
                                     $cuotaTotal     = $interesActual + $pagoPorMes;
                                     $cuotaTotal     = round($cuotaTotal,1);
                                     $precioVenta    = $precioVenta + $cuotaTotal;
-                                    
-//                                    $sigPago = siguientePago($credit['Credit']['date']);
                                     ?>
 
                                     <td><?php echo $i+1; ?></td>
@@ -314,11 +424,6 @@
                                     <td><?php echo $interesActual; ?></td>
                                     <td class="total"><?php echo $cuotaTotal; ?></td>
                                     <td class="saldo"> <?php echo $saldoPlan; ?> </td>
-                                    <td>
-                                        <?php echo date("Y-m-d", strtotime($credit['Credit']['date']."+$i month + 30 days ")); ?>
-                                        <?php // echo siguientePago($credit['Credit']['date']); ?>
-                                    </td>
-
                                 </tr>
                             <?php endfor; ?>    
                         </tbody>
@@ -335,21 +440,27 @@
                         <tr>
                             <th>Id</th>
                             <th>Pago</th>
+                            <th>Pre-Pago</th>
                             <th>Interés</th>
                             <th>Saldo</th>
                             <th>Multa</th>
+                            <th>Se cobró <br> multa </th>
                             <th>Fecha</th>
+                            <th>Fecha Limite</th>
                             <th>Siguiente Pago</th>
                         </tr>
                         <?php
                         foreach ($credit['Payment'] as $key => $pago):?>
                         <tr>
                             <td><?php echo $pago['id']?></td> 
-                            <td><?php echo $pago['amount']?></td> 
+                            <td><?php echo $pago['amount']?></td>
+                            <td><?php echo $pago['prepayment']?></td> 
                             <td><?php echo $pago['interest']?></td>
                             <td><?php echo $pago['residue']?></td>
                             <td><?php echo $pago['fine']?></td>
+                            <td><?php echo ($pago['exception']==0)? 'si':'no' ?></td>
                             <td><?php echo $pago['date']?></td>
+                            <td><?php echo $pago['date_payment']?></td>
                             <td><?php echo $pago['next_payment']?></td>
                         </tr>
                         <?php
@@ -375,7 +486,6 @@ function diasPago($fechaCredito,$cuotas){
 }
 
  function siguientePago($date) {
-//        $dateCurrent = date('Y/m/d');
         return  date("Y-m-d", strtotime($date." + 30 day"));
     }
 ?>
